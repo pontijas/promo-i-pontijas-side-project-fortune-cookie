@@ -4,41 +4,49 @@
 @import 'components/footer';
 
 * {
-  background-color: blue;
+  margin: 0;
 }
 
-.container {
-  font-family: 'Rubik', sans-serif;
-  color: #4a4a4a;
+.page {
+  &-container {
+    height: 100vh;
+    background-image: url('../images/chinese-background-2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &-title {
+    color: gold;
+  }
 }
 
-.form {
-  width: 60vw;
-  display: flex;
-  flex-direction: column;
+.cookie {
+  &-container {
+  }
+  &-img {
+    animation-name: jump;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    transition: transform ease 0.3s;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
 }
 
-.input__guess-number {
-  background-color: #e3e3e3;
-  border-radius: 10px;
-  border: none;
-  padding: 10px 20px;
-  margin: 20px 10px;
-}
+// animations
 
-.input__clue,
-.input__tries {
-  border: solid 2px #e3e3e3;
-  padding: 10px 20px;
-  margin: 20px 10px;
-}
-
-.js-input-btn {
-  width: 150px;
-  background-color: #3cdbc0;
-  color: white;
-  padding: 10px 20px;
-  margin: 20px 10px;
-  border-radius: 10px;
-  border: none;
+@keyframes jump {
+  from {
+    transform: rotate(-15deg);
+  }
+  to {
+    transform: rotate(25deg);
+  }
 }
