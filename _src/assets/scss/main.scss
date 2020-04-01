@@ -1,0 +1,44 @@
+@import 'core/variables';
+@import 'components/header';
+@import 'components/main';
+@import 'components/footer';
+
+* {
+  background-color: blue;
+}
+
+.container {
+  font-family: 'Rubik', sans-serif;
+  color: #4a4a4a;
+}
+
+.form {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.input__guess-number {
+  background-color: #e3e3e3;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+  margin: 20px 10px;
+}
+
+.input__clue,
+.input__tries {
+  border: solid 2px #e3e3e3;
+  padding: 10px 20px;
+  margin: 20px 10px;
+}
+
+.js-input-btn {
+  width: 150px;
+  background-color: #3cdbc0;
+  color: white;
+  padding: 10px 20px;
+  margin: 20px 10px;
+  border-radius: 10px;
+  border: none;
+}
