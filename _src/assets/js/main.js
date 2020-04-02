@@ -64,17 +64,17 @@ function getRandomNumber() {
 }
 
 function updateAll() {
-  breakCookie();
-  colorQuote();
+  paintQuote();
+  colorTextQuote();
 }
 
-function breakCookie() {
+function paintQuote() {
   for (let i = 0; i < quotes.length; i++) {
     cookieQuote.innerHTML = `<p class="css-cookie-quote">${quotes[i]}</p>`;
   }
 }
 
-function colorQuote() {
+function colorTextQuote() {
   const randomNumber = getRandomNumber();
   if (randomNumber % 2 === 0) {
     cookieQuote.classList.add('update-color-quote');

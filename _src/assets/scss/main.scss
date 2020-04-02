@@ -10,7 +10,7 @@
 .page {
   &-container {
     height: 100vh;
-    background-image: url('../images/chinese-background-2.jpg');
+    background-image: url('../images/chinese-background-3.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -55,7 +55,7 @@
   animation-duration: 2s;
   animation-direction: alternate;
   animation-iteration-count: 1;
-  transition: ease 1s;
+  transition: ease 0.5s;
 }
 
 .update-color-quote {
