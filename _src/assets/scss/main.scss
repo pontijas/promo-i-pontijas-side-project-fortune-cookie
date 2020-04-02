@@ -20,7 +20,9 @@
     align-items: center;
   }
   &-title {
-    color: gold;
+    padding: 20px 0;
+    font-family: $fontTitle;
+    color: $primaryColor;
   }
 }
 
@@ -40,10 +42,22 @@
   }
 }
 
+.css-cookie-quote-container {
+  height: 100px;
+}
+
 .css-cookie-quote {
-  height: 50px;
-  color: gold;
+  color: $quoteColor;
+  margin: 20px 0;
+  padding: 10px 30px;
   font-size: 24px;
+  background-color: ivory;
+  box-shadow: 3px 3px 5px $shadow;
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  transition: ease 1s;
 }
 
 // animations
@@ -54,5 +68,14 @@
   }
   to {
     transform: rotate(25deg);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
   }
 }
