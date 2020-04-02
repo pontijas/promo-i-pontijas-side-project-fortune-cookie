@@ -41,11 +41,11 @@
 }
 
 .css-cookie-quote-container {
+  color: $quoteColorDefault;
   height: 100px;
 }
 
 .css-cookie-quote {
-  color: $quoteColor;
   margin: 20px 0;
   padding: 10px 30px;
   font-size: 24px;
@@ -56,6 +56,10 @@
   animation-direction: alternate;
   animation-iteration-count: 1;
   transition: ease 1s;
+}
+
+.update-color-quote {
+  color: $quoteColorUpdate;
 }
 
 // animations

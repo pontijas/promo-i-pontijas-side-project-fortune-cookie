@@ -3,7 +3,7 @@
 const cookieBtn = document.querySelector('.js-cookie-btn');
 const cookieQuote = document.querySelector('.js-cookie-quote');
 
-// chinese quotes i like
+// chinese quotes I like
 // What is yours, shall come to you.
 // Patience is your alley.
 // All things are difficult before they are easy.
@@ -59,11 +59,31 @@ const quotes = [
 
 console.log(quotes);
 
+function getRandomNumber() {
+  return Math.ceil(Math.random() * 100);
+}
+
+function updateAll() {
+  breakCookie();
+  colorQuote();
+}
+
 function breakCookie() {
   for (let i = 0; i < quotes.length; i++) {
     cookieQuote.innerHTML = `<p class="css-cookie-quote">${quotes[i]}</p>`;
   }
-  console.log('me han clickado');
 }
 
-cookieBtn.addEventListener('click', breakCookie);
+function colorQuote() {
+  const randomNumber = getRandomNumber();
+  if (randomNumber % 2 === 0) {
+    cookieQuote.classList.add('update-color-quote');
+    console.log('is even red');
+  } else {
+    cookieQuote.classList.remove('update-color-quote');
+    console.log('is uneven blue');
+  }
+  console.log(randomNumber);
+}
+
+cookieBtn.addEventListener('click', updateAll);
