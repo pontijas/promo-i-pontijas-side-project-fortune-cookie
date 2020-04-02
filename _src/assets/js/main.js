@@ -60,7 +60,7 @@ const quotes = [
 console.log(quotes);
 
 function getRandomNumber() {
-  return Math.ceil(Math.random() * 100);
+  return Math.ceil(Math.random() * 25);
 }
 
 function updateAll() {
