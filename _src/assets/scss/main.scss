@@ -34,10 +34,8 @@
     animation-duration: 2s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-    transition: transform ease 0.3s;
     &:hover {
       cursor: pointer;
-      transform: scale(1.2);
     }
   }
 }

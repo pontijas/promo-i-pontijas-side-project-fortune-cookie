@@ -58,12 +58,11 @@ const quotes = [
 ];
 
 console.log(quotes);
-console.log(quotes[0]);
-console.log(quotes[5]);
-console.log('quotes length', quotes.length);
 
-function breakCookie(quotes) {
-  cookieQuote.innerHTML = `<p class="css-cookie-quote">Holi</p>`;
+function breakCookie() {
+  for (let i = 0; i < quotes.length; i++) {
+    cookieQuote.innerHTML = `<p class="css-cookie-quote">${quotes[i]}</p>`;
+  }
   console.log('me han clickado');
 }
 
