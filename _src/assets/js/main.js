@@ -60,7 +60,7 @@ const quotes = [
 console.log(quotes);
 
 function getRandomNumber() {
-  return Math.ceil(Math.random() * 100);
+  return Math.ceil(Math.random() * 25);
 }
 
 function updateAll() {
@@ -68,10 +68,14 @@ function updateAll() {
   colorTextQuote();
 }
 
-function paintQuote() {
-  for (let i = 0; i < quotes.length; i++) {
-    cookieQuote.innerHTML = `<p class="css-cookie-quote">${quotes[i]}</p>`;
+function paintQuote(randomNumber) {
+  for (let i = 0; i < quotes.length + 1; i++) {
+    let quote = quotes[i];
+    if (i === randomNumber) {
+      cookieQuote.innerHTML = `<p class="css-cookie-quote">${quote}</p>`;
+    }
   }
+  console.log('randomNumber', randomNumber);
 }
 
 function colorTextQuote() {
@@ -83,7 +87,7 @@ function colorTextQuote() {
     cookieQuote.classList.remove('update-color-quote');
     console.log('is uneven blue');
   }
-  console.log(randomNumber);
+  console.log('bingo', randomNumber);
 }
 
 cookieBtn.addEventListener('click', updateAll);
