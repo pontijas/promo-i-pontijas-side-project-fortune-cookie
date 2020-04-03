@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <link href="https://fonts.googleapis.com/css?family=Merienda:400,700&display=swap" rel="stylesheet" />
-    <title>Fortune Cookie</title>
+    <partial src="_head.html"></partial>
   </head>
   <body>
-    <main class="page-container">
-      <h1 class="page-title">Fortune Cookie</h1>
-      <div class="cookie-container js-cookie-btn">
-        <img class="cookie-img" src="../assets/images/cookie-1.png" height="200px" />
-      </div>
-      <small class="css-cookie-quote-container js-cookie-quote"></small>
-    </main>
+    <div class="page-container">
+      <partial src="_main.html"></partial>
+      <partial src="_footer.html"></partial>
+    </div>
     <script type="text/javascript" src="../assets/js/main.js"></script>
   </body>
 </html>

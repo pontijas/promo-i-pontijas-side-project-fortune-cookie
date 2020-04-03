@@ -1,5 +1,4 @@
 @import 'core/variables';
-@import 'components/header';
 @import 'components/main';
 @import 'components/footer';
 
@@ -24,11 +23,19 @@
     font-family: $fontTitle;
     color: $primaryColor;
   }
+  &-text {
+    padding: 10px 0px 20px 0;
+    font-family: $fontTitle;
+    color: $primaryColor;
+  }
+  &-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .cookie {
-  &-container {
-  }
   &-img {
     animation-name: jump;
     animation-duration: 2s;
