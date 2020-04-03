@@ -1,5 +1,4 @@
 @import 'core/variables';
-@import 'components/main';
 @import 'components/footer';
 
 * {
@@ -23,20 +22,11 @@
     font-family: $fontTitle;
     color: $primaryColor;
   }
-  &-text {
-    padding: 10px 0px 20px 0;
-    font-family: $fontTitle;
-    color: $primaryColor;
-  }
-  &-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
 .cookie {
   &-img {
+    height: 30vh;
     animation-name: jump;
     animation-duration: 2s;
     animation-direction: alternate;
@@ -49,17 +39,18 @@
 
 .css-cookie-quote-container {
   color: $quoteColorDefault;
-  height: 100px;
 }
 
 .css-cookie-quote {
+  text-align: center;
   margin: 20px 0;
   padding: 10px 30px;
-  font-size: 24px;
+  width: 40vw;
+  font-size: 12px;
   background-color: $paperColor;
   box-shadow: 3px 3px 5px $shadow;
   animation-name: appear;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-direction: alternate;
   animation-iteration-count: 1;
   transition: ease 0.5s;
@@ -69,14 +60,25 @@
   color: $quoteColorUpdate;
 }
 
+// responsive
+
+@media all and (min-width: 768px) {
+  .css-cookie-quote {
+    font-size: 18px;
+  }
+  .cookie-img {
+    height: 50vh;
+  }
+}
+
 // animations
 
 @keyframes jump {
   from {
-    transform: rotate(-15deg);
+    transform: rotate(0deg);
   }
   to {
-    transform: rotate(25deg);
+    transform: rotate(30deg);
   }
 }
 
