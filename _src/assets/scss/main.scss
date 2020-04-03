@@ -6,6 +6,11 @@
 }
 
 .page {
+  &-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   &-container {
     height: 100vh;
     background-image: url('../images/chinese-background-3.jpg');
@@ -22,11 +27,17 @@
     font-family: $fontTitle;
     color: $primaryColor;
   }
+  &-text {
+    padding: 5px 0 10px 0;
+    font-family: $fontTitle;
+    color: $primaryColor;
+    text-align: center;
+  }
 }
 
 .cookie {
   &-img {
-    height: 30vh;
+    height: 20vh;
     animation-name: jump;
     animation-duration: 2s;
     animation-direction: alternate;
@@ -45,7 +56,6 @@
   text-align: center;
   margin: 20px 0;
   padding: 10px 30px;
-  width: 40vw;
   font-size: 12px;
   background-color: $paperColor;
   box-shadow: 3px 3px 5px $shadow;
@@ -67,7 +77,7 @@
     font-size: 18px;
   }
   .cookie-img {
-    height: 50vh;
+    height: 30vh;
   }
 }
 
