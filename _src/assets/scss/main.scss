@@ -10,7 +10,7 @@
 .page {
   &-container {
     height: 100vh;
-    background-image: url('../images/chinese-background-2.jpg');
+    background-image: url('../images/chinese-background-3.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -27,9 +27,8 @@
 }
 
 .cookie {
-  &-container {
-  }
   &-img {
+    height: 30vh;
     animation-name: jump;
     animation-duration: 2s;
     animation-direction: alternate;
@@ -42,17 +41,18 @@
 
 .css-cookie-quote-container {
   color: $quoteColorDefault;
-  height: 100px;
 }
 
 .css-cookie-quote {
+  text-align: center;
   margin: 20px 0;
   padding: 10px 30px;
-  font-size: 24px;
+  width: 40vw;
+  font-size: 12px;
   background-color: $paperColor;
   box-shadow: 3px 3px 5px $shadow;
   animation-name: appear;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-direction: alternate;
   animation-iteration-count: 1;
   transition: ease 0.5s;
@@ -62,14 +62,25 @@
   color: $quoteColorUpdate;
 }
 
+// responsive
+
+@media all and (min-width: 768px) {
+  .css-cookie-quote {
+    font-size: 18px;
+  }
+  .cookie-img {
+    height: 50vh;
+  }
+}
+
 // animations
 
 @keyframes jump {
   from {
-    transform: rotate(-15deg);
+    transform: rotate(0deg);
   }
   to {
-    transform: rotate(25deg);
+    transform: rotate(30deg);
   }
 }
 
