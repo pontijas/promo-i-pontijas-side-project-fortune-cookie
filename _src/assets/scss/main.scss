@@ -37,7 +37,7 @@
 
 .cookie {
   &-img {
-    height: 20vh;
+    height: 30vh;
     animation-name: jump;
     animation-duration: 2s;
     animation-direction: alternate;
@@ -56,7 +56,7 @@
   text-align: center;
   margin: 20px 0;
   padding: 10px 30px;
-  font-size: 12px;
+  font-size: 18px;
   background-color: $paperColor;
   box-shadow: 3px 3px 5px $shadow;
   animation-name: appear;
@@ -72,12 +72,17 @@
 
 // responsive
 
-@media all and (min-width: 768px) {
+@media all and (max-width: 768px) {
+  .page-text {
+    width: 50vw;
+  }
+
   .css-cookie-quote {
-    font-size: 18px;
+    width: 50vw;
+    font-size: 12px;
   }
   .cookie-img {
-    height: 30vh;
+    height: 20vh;
   }
 }
 
